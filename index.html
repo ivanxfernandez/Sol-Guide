@@ -169,7 +169,7 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:3px;width:28
   <ul>
     <li><b>Who runs it:</b> St. Paul's Senior Services, a San Diego non-profit. Its PACE program is called St. Paul's PACE.</li>
     <li><b>What PACE is:</b> PACE = <b>Program of All-Inclusive Care for the Elderly</b>, a Medicare / Medi-Cal program for people 55+ who need nursing-home-level care but live at home. The PACE program covers their doctors, day center, therapy and <b>transportation</b>. We are that transportation.</li>
-    <li><b>Where riders go:</b> St. Paul's centers (111 Elm St, the Maple St campus, Chula Vista, El Cajon, North County, Mission Valley), outside medical appointments, dialysis, methadone clinics.</li>
+    <li><b>Where participants go:</b> St. Paul's centers (111 Elm St, the Maple St campus, Chula Vista, El Cajon, North County, Mission Valley), outside medical appointments, dialysis, methadone clinics.</li>
     <li><b>Who talks to us:</b> St. Paul's staff use the Microsoft Teams chat "Sol Dispatch Center / St Paul's Seniors". Their final trip changes come by 3:15 PM.</li>
     <li><b>Our drivers:</b> St. Paul's South drivers, Paycom department 250, start from South Yard (E St).</li>
   </ul>
@@ -737,7 +737,7 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:3px;width:28
     <li>Ask for the <b>rider's name</b>. If the caller isn't the rider, ask their name and where they call from (PACE, VA, a clinic, Lyft...).</li>
     <li>Find the trip in RouteGenie: search the rider's name on the Dispatching board, then try the address.</li>
     <li>Not on the board? Check <b>Reservations</b>: the trip may have been cancelled or marked no show. Read the notes for the reason.</li>
-    <li>Not anywhere = we don't have that trip today. PACE riders call PACE to book it, or transfer them to (619) 677-3800 option 2 or (619) 591-1180. VA riders: transfer to (858) 552-7575 option 2 so the VA sends us the request.</li>
+    <li>Not anywhere = we don't have that trip today. PACE participants call PACE to book it, or transfer them to (619) 677-3800 option 2 or (619) 591-1180. VA riders: transfer to (858) 552-7575 option 2 so the VA sends us the request.</li>
     <li>Found it? Note the <b>driver</b> and the <b>van number</b>.</li>
     <li>On the map, type the van number in the search box. The map jumps to the van. Click the van icon to see its ETA to the pick-up.</li>
     <li>Does the ETA make sense? If yes, give it to the caller. If not (it says 30 minutes but the van is around the corner), ask the dispatcher for that account before you answer.</li>
@@ -845,11 +845,11 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:3px;width:28
     <tr><th>Situation</th><th>What we do</th></tr>
     <tr><td><b>Driver running late</b></td><td>Try to give the trip to a driver who can make it on time, outside appointments first. If nobody can, leave it and tell the program: St. Paul's by Teams ("Sol Dispatch Center / St Paul's Seniors") or phone, FHC by phone. Ask your lead before you message a program. Log late drivers in the Employee Resources Hub.</td></tr>
     <tr><td><b>Driver calls out or doesn't show</b></td><td>Tell your lead and Schedulers. If a spare driver is available, give them the whole route as it is, so no one else's start time changes. Otherwise split the trips. Wheelchair trips go to wheelchair drivers, not to an idle gurney crew.</td></tr>
-    <tr><td><b>Incident / 911</b> (a fall, a rider on the floor, an accident)</td><td>Stop giving that driver trips until their incident report is done. Don't touch the trip already on board. Tell your lead right away. Rooms often report these in the St Paul's / FHC chat ("240 is calling 911"). The report goes with your EOSR.</td></tr>
+    <tr><td><b>Incident / 911</b> (a fall, a participant on the floor, an accident)</td><td>Stop giving that driver trips until their incident report is done. Don't touch the trip already on board. Tell your lead right away. Rooms often report these in the St Paul's / FHC chat ("240 is calling 911"). The report goes with your EOSR.</td></tr>
     <tr><td><b>Outbound (A) leg was a No Show</b></td><td>Don't activate or assign the return. It gets cancelled. Add a Dispatching Note first ("A leg no show - return cancelled"), and let your lead do the cancel unless they've told you to.</td></tr>
-    <tr><td><b>Bedbug (BB) or isolation (ISO) rider</b></td><td>Always rides alone. A BB rider only rides in a van that carries bedbug spray. Before assigning any St. Paul's trip, read the notes for "bed bug" / "isolation". The note says <code>NO RIDE SHARE - CLEAN VAN AFTER DROP-OFF</code>.</td></tr>
+    <tr><td><b>Bedbug (BB) or isolation (ISO) participant</b></td><td>Always rides alone. A BB participant only rides in a van that carries bedbug spray. Before assigning any St. Paul's trip, read the notes for "bed bug" / "isolation". The note says <code>NO RIDE SHARE - CLEAN VAN AFTER DROP-OFF</code>.</td></tr>
     <tr><td><b>Participant traveling with a spouse or companion</b></td><td>No shared ride. The companion takes a seat, so count them.</td></tr>
-    <tr><td><b>Methadone trip</b></td><td>The same driver does the return. The rider is only at the clinic a short time.</td></tr>
+    <tr><td><b>Methadone trip</b></td><td>The same driver does the return. The participant is only at the clinic a short time.</td></tr>
     <tr><td><b>MTS Access transfer point</b> (NCTD)</td><td>Be on time and never leave the rider alone at the transfer point.</td></tr>
     <tr><td><b>A trip you assigned is unassigned again</b></td><td>Open the order &rarr; <b>History</b> tab to see who changed it and when. St. Paul's re-editing a trip can put the blue dot back and unassign it. Reassign it, and re-apply the time rule if needed.</td></tr>
     <tr><td><b>"Vehicle #... is on break"</b></td><td>The driver is at lunch. Wait, or use another van.</td></tr>
@@ -988,7 +988,7 @@ Incident / Accident Notes         &lt;incidents; attach the report&gt;</pre>
   <ul>
     <li>Write <b>NONE</b> (or "No significant incidents to report") in empty sections.</li>
     <li>Made-up example: <i>"Driver X called out 1 hr before his shift, so I split his afternoon between Driver Y and Driver Z."</i></li>
-    <li>Program-side problems that management should see (a rider never ready, wrong addresses again and again) go in a separate <b>Daily Operations Issues</b> email: a numbered list, one line each, saying what happened.</li>
+    <li>Program-side problems that management should see (a participant never ready, wrong addresses again and again) go in a separate <b>Daily Operations Issues</b> email: a numbered list, one line each, saying what happened.</li>
   </ul>
 </section>
 
@@ -1027,7 +1027,7 @@ Incident / Accident Notes         &lt;incidents; attach the report&gt;</pre>
     <li>Assigning without re-checking: another dispatcher already moved the trip or the driver.</li>
     <li>Applying a chat's "tomorrow" to the wrong day.</li>
     <li>Changing an <b>NCTD</b> or <b>LBVA</b> pick-up time. Those are not changed, except LBVA's standing dialysis times.</li>
-    <li>Sharing a ride with a bedbug or isolation rider, or putting St. Paul's and FHC (or NCTD and FHC) riders on board together.</li>
+    <li>Sharing a ride with a bedbug or isolation participant, or putting St. Paul's and FHC participants (or NCTD riders and FHC participants) on board together.</li>
     <li>Starting a driver before their hard start time, or after their slot ends.</li>
     <li>Giving a South Yard or Spring Valley driver a Vista van.</li>
     <li>Sending a gurney with one person, or a bariatric gurney with two.</li>
@@ -1246,8 +1246,8 @@ Incident / Accident Notes         &lt;incidents; attach the report&gt;</pre>
   </style>
   <details><summary>1. A St. Paul's blue-dot trip has a 9:30 appointment. What is the pick-up time?</summary>8:30. Appointments after 6:30 get a pick-up 60 minutes before. Appointments at or before 6:30 get 30 minutes before (6:00 &rarr; 5:30).</details>
   <details><summary>2. An NCTD rider's pick-up would fit a route better 20 minutes earlier. Can you move it?</summary>No. NCTD pick-up times are never changed. Up to 30 minutes late is OK.</details>
-  <details><summary>3. Two St. Paul's riders go to the same center, and one of them is on the bedbug list. Can they share?</summary>No. Bedbug and isolation riders always ride alone, and a bedbug rider only rides in a van that carries bedbug spray.</details>
-  <details><summary>4. An FHC van finishes its FHC drops at 8:50. Can it take a St. Paul's trip next?</summary>Yes, back-to-back. Just never with St. Paul's and FHC riders on board at the same time.</details>
+  <details><summary>3. Two St. Paul's participants go to the same center, and one of them is on the bedbug list. Can they share?</summary>No. Bedbug and isolation participants always ride alone, and a bedbug participant only rides in a van that carries bedbug spray.</details>
+  <details><summary>4. An FHC van finishes its FHC drops at 8:50. Can it take a St. Paul's trip next?</summary>Yes, back-to-back. Just never with St. Paul's and FHC participants on board at the same time.</details>
   <details><summary>5. A driver clocked in at 6:40. When must their lunch start at the latest?</summary>11:40, the end of the 5th hour. Use the Paycom clock-in, not the RouteGenie route start.</details>
   <details><summary>6. A driver's first pick-up is 8:10 and the drive from their yard is 33 minutes. What is the start time?</summary>8:10 &minus; 33 &minus; 15 = 7:22, rounded down to <b>7:20</b>.</details>
   <details><summary>7. A driver calls 911 for a participant who fell. What do you do with that driver's next trips?</summary>Stop giving them trips until the incident report is done, don't touch the trip on board, and tell your lead right away. The next trips get covered by other drivers.</details>
