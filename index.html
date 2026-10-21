@@ -323,7 +323,7 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:3px;width:28
     <tr><td><b>RouteGenie</b></td><td>soltransportation.routegenie.com</td><td>All trips: see, add, cancel, assign and unassign, change times, rider info, the map.</td></tr>
     <tr><td><b>Paycom</b></td><td>paycomonline.net</td><td>HR and payroll: driver punches, lunches, overtime, time off, shifts.</td></tr>
     <tr><td>Paylocity</td><td>access.paylocity.com</td><td>Our older payroll system. Some tutorials still show it; Paycom is replacing it.</td></tr>
-    <tr><td><b>Monthly driver tracking sheet</b></td><td>Google Sheets (new link every month, made by Ivan)</td><td>Daily list for every account: van #, driver, clock-in time and the <b>5th hour</b> (latest lunch start). Filled from Paycom and RouteGenie. A lunch after the 5th hour can cost the company a penalty.</td></tr>
+    <tr><td><b>Monthly driver tracking sheet</b></td><td>Google Sheets (new link every month, made by Ivan)</td><td>Daily list for every account: van #, driver, clock-in time and the <b>5th hour</b> (clock-in + 5:00; the lunch must start before it). Filled from Paycom and RouteGenie. A lunch that starts at or after the 5th hour costs the company a penalty (CMP).</td></tr>
     <tr><td><b>VetRide</b></td><td>third-party.vetride.va.gov</td><td>Where the VA sends its trips (7114, 7115, 7115C). Usually the day before; same-day add-ons are added here too.</td></tr>
     <tr><td><b>PACE Logic</b></td><td>cloudwest.collabrios.com/userportal</td><td>St. Paul's PACE (250S) participant database. Sign in, pick <b>Pagelogic</b>, and the PACE portal opens in a new tab. Use it to confirm addresses, apartment numbers and phone numbers for outbound calls.</td></tr>
     <tr><td><b>Email</b></td><td>Mail app</td><td>One inbox per account. Trip updates, same-day add-ons, cancellations, and some accounts send next-day trips as an Excel file.</td></tr>
@@ -862,7 +862,7 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:3px;width:28
   <h2>Lunches during the day</h2>
   <p class="lead">The meal rule is in <a href="#pc-meal">Meal and overtime rules</a>. This section covers how to fit lunches into a live day.</p>
   <ul>
-    <li><b>The 5th hour:</b> clock-in + 5:00 is the latest a 30-minute lunch can start. Clock in 6:10 &rarr; lunch must start by 11:10. Use the real clock-in from Paycom. The route start in RouteGenie can be 5&ndash;10 minutes off.</li>
+    <li><b>The 5th hour:</b> clock-in + 5:00. The 30-minute lunch must start <b>before</b> it. Clock in 6:10 &rarr; the driver must clock out for lunch before 11:10. A lunch out at 11:10 is already in the 5th hour, which means CMP. Plan it with some margin. Use the real clock-in from Paycom. The route start in RouteGenie can be 5&ndash;10 minutes off.</li>
     <li><b>Where lunches fit:</b> while the driver waits at an outside appointment for the return, or in a real gap between trips. A driver can't take lunch with a rider on board.</li>
     <li><b>Going past the 5th hour</b> is only for when nothing else covers a trip. Each late lunch costs an extra hour of pay (CMP) and needs a timecard note.</li>
     <li><b>Midday lunch check:</b> post who is still missing lunch, one line per driver with their 5th hour, sorted by 5th hour. St. Paul's + FHC go in the ST PAULS PACE / FAMILY HEALTH chat ("drivers missing lunch:"), NCTD in DISPATCH TEAM. Re-check right before posting if your data is more than 10 minutes old.</li>
@@ -1104,7 +1104,7 @@ Incident / Accident Notes         &lt;incidents; attach the report&gt;</pre>
     <li>Time Management &rarr; <b>Timecard Search</b>. Pick the pay period and click Refresh.</li>
     <li>Filter by department (Home Allocation, e.g. 806 for FHC) and open each driver's timecard.</li>
     <li>Look down the <b>speech-bubble</b> column. A bubble = that day has a note. Hover it to read it.</li>
-    <li>Compare with the punches: a lunch after the 5th hour needs a meal note (and CMP), more than 9 hours needs an OT note, and a double punch needs a delete note (see Meal and overtime rules).</li>
+    <li>Compare with the punches: a lunch that starts at or after the 5th hour needs a meal note (and CMP), more than 9 hours needs an OT note, and a double punch needs a delete note (see Meal and overtime rules).</li>
     <li>Notes starting "Automated Time-Off" are made by the system. They don't count.</li>
     <li>Write down the drivers and days that are missing a note and send the list to your lead.</li>
   </ol>
@@ -1124,7 +1124,7 @@ Incident / Accident Notes         &lt;incidents; attach the report&gt;</pre>
 <section id="pc-meal">
   <h2>Meal and overtime rules (California)</h2>
   <ul>
-    <li>A <b>30-minute meal</b> must start <b>no later than the end of the 5th hour</b> of work. Clock in 6:00 &rarr; lunch must start by 11:00.</li>
+    <li>A <b>30-minute meal</b> must start <b>before the end of the 5th hour</b> of work. Clock in 6:00 &rarr; lunch out before 11:00. A lunch out at 11:00 or later is a CMP.</li>
     <li>If the day is <b>6 hours or less</b>, the meal can be waived (our drivers have the lunch waiver).</li>
     <li>Over <b>10 hours</b> needs a second meal.</li>
     <li>A missed or late meal = <b>one extra hour of pay</b> (meal premium; our <b>CMP</b> code).</li>
@@ -1132,7 +1132,7 @@ Incident / Accident Notes         &lt;incidents; attach the report&gt;</pre>
   <h3>What we flag and the notes we use</h3>
   <div class="tbl"><table>
     <tr><th>Flag</th><th>Note wording</th></tr>
-    <tr><td>Lunch started after the 5th hour</td><td>"Driver passed his 5th hour due to assisting trips due to high volume." + CMP code</td></tr>
+    <tr><td>Lunch started at or after the 5th hour</td><td>"Driver passed his 5th hour due to assisting trips due to high volume." + CMP code</td></tr>
     <tr><td>More than 9 hours worked</td><td>"Overtime due to assisting trips and returns." (separate comment from the meal note)</td></tr>
     <tr><td>No lunch and more than 6 hours</td><td>Flag to your lead</td></tr>
     <tr><td>Double punch</td><td>"Please delete the 7:52 AM clock in, correct clock in is 7:00 AM."</td></tr>
@@ -1248,7 +1248,7 @@ Incident / Accident Notes         &lt;incidents; attach the report&gt;</pre>
   <details><summary>2. An NCTD rider's pick-up would fit a route better 20 minutes earlier. Can you move it?</summary>No. NCTD pick-up times are never changed. Up to 30 minutes late is OK.</details>
   <details><summary>3. Two St. Paul's participants go to the same center, and one of them is on the bedbug list. Can they share?</summary>No. Bedbug and isolation participants always ride alone, and a bedbug participant only rides in a van that carries bedbug spray.</details>
   <details><summary>4. An FHC van finishes its FHC drops at 8:50. Can it take a St. Paul's trip next?</summary>Yes, back-to-back. Just never with St. Paul's and FHC participants on board at the same time.</details>
-  <details><summary>5. A driver clocked in at 6:40. When must their lunch start at the latest?</summary>11:40, the end of the 5th hour. Use the Paycom clock-in, not the RouteGenie route start.</details>
+  <details><summary>5. A driver clocked in at 6:40. When must their lunch start?</summary><b>Before 11:40.</b> 6:40 + 5:00 = 11:40, the 5th hour. A lunch out at 11:40 is already in the 5th hour, which means a CMP, so plan it with some margin. Use the Paycom clock-in, not the RouteGenie route start.</details>
   <details><summary>6. A driver's first pick-up is 8:10 and the drive from their yard is 33 minutes. What is the start time?</summary>8:10 &minus; 33 &minus; 15 = 7:22, rounded down to <b>7:20</b>.</details>
   <details><summary>7. A driver calls 911 for a participant who fell. What do you do with that driver's next trips?</summary>Stop giving them trips until the incident report is done, don't touch the trip on board, and tell your lead right away. The next trips get covered by other drivers.</details>
   <details><summary>8. A driver is running 25 minutes late to an outside appointment pick-up and nobody nearby is free. What now?</summary>Leave the trip and tell the program. For St. Paul's that's Teams or phone, for FHC it's phone. Ask your lead before you message the program, and log the late driver.</details>
