@@ -90,6 +90,7 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:3px;width:28
   <a href="#rg-rightclick">Right-click menu</a>
   <a href="#rg-reservations">Reservations and will calls</a>
   <a href="#rg-import">Trip Import</a>
+  <a href="#va-pickup">VA pick-up times</a>
   <a href="#rg-preassign">Pre-Assign Modes</a>
   <a href="#rg-assign">Assigning and route order</a>
   <a href="#rg-shifts">Driver Shifts</a>
@@ -566,6 +567,42 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:3px;width:28
   </ol>
 </section>
 
+
+<!-- ================= VA PICK-UP TIMES ================= -->
+<section id="va-pickup">
+  <h2>VA pick-up times: how they are set</h2>
+  <p class="lead">For <span class="pill p-sdva">SDVA</span> and <span class="pill p-lbva">LBVA</span> trips, the pick-up time comes from our processor pages when the VetRide manifest is uploaded. <b>The processors do the math.</b> This table is here so you can check a pick-up time when it looks wrong.</p>
+  <h3>Trips going to an appointment</h3>
+  <p><b>Pick-up = appointment time minus the lead time below.</b> The distance is the manifest's <b>Estimated Distance (miles)</b> column (VetRide's number). The original appointment is kept in the trip notes as <code>Appt: HH:MM</code>.</p>
+  <div class="tbl"><table>
+    <tr><th>Distance (miles)</th><th><span class="pill p-sdva">SDVA</span> 7114 / 7115 / 7115C</th><th><span class="pill p-lbva">LBVA</span> 7117 / 7118</th></tr>
+    <tr><td>25 or less</td><td>2 h to the La Jolla VA (3350 La Jolla Village Dr); 1 h to anywhere else</td><td>2 h (1 h for dialysis that is not at the VA)</td></tr>
+    <tr><td>Over 25, under 70</td><td>2 h</td><td>2 h</td></tr>
+    <tr><td>70 to 80</td><td>2 h</td><td>2.5 h</td></tr>
+    <tr><td>Over 80, under 100</td><td>3 h</td><td>2.5 h</td></tr>
+    <tr><td>100 to under 140</td><td>3 h</td><td>3 h</td></tr>
+    <tr><td>140 to 200</td><td>3 h</td><td>3.5 h</td></tr>
+    <tr><td>Over 200</td><td>3 h</td><td>4 h</td></tr>
+    <tr><td>No distance in the file</td><td>2 h</td><td>2 h</td></tr>
+  </table></div>
+  <ul>
+    <li><b>A requested time always wins.</b> If the notes say "preferred / specific / requested pick up" with a time, that time is the pick-up (both VAs).</li>
+    <li><b>LBVA standing dialysis times:</b> some regular dialysis veterans have a fixed pick-up (and sometimes a fixed return) on their dialysis days (Mon/Wed/Fri or Tue/Thu/Sat). The LBVA processor sets those times by name, ahead of the table. Your lead has the current list.</li>
+  </ul>
+  <h3>Return trips</h3>
+  <p>Checked in this order. The first one that fits sets the pick-up:</p>
+  <ol class="steps">
+    <li>The manifest's pick-up is the <b>day after</b> the appointment: keep it.</li>
+    <li><b>SDVA only:</b> the return becomes a <b>will call</b> when the pick-up is at the La Jolla VA, or when the manifest time is 23:59 or 23:00. Discharges and airport trips are <b>never</b> will calls.</li>
+    <li><b>LBVA only:</b> a standing dialysis return time, if the veteran has one.</li>
+    <li>The drop-off is <b>the VA itself</b> (La Jolla or 5901 E 7th St, Long Beach), and it isn't a discharge or airport trip: pick-up = the appointment time.</li>
+    <li>The notes give a time ("return at", "done at", "pick up at", or the end of a time range): pick-up = that time. SDVA ignores a note time that is earlier than the appointment.</li>
+    <li>Otherwise: pick-up = the appointment time.</li>
+  </ol>
+  <div class="box warn"><b class="t">The processor flags these for a person to check</b>Trips over 100 miles, bariatric (300+ lb or "3-4 man"), wait-and-return, and out of state.</div>
+  <div class="box tip"><b class="t">Example (made up)</b>SDVA veteran, appointment 9:30 at the La Jolla VA, 18 miles: 25 or less and going to La Jolla &rarr; 2 h &rarr; pick-up <b>7:30</b>. The same trip to a clinic in Chula Vista &rarr; 1 h &rarr; <b>8:30</b>.</div>
+</section>
+
 <!-- ================= PREASSIGN ================= -->
 <section id="rg-preassign">
   <h2>Pre-Assign Modes: building tomorrow</h2>
@@ -633,8 +670,8 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:3px;width:28
     <tr><td><span class="pill p-pace">250S</span></td><td>Blue-dot A legs: appt at or before 6:30 &rarr; minus 30 min; after 6:30 &rarr; minus 60 min. Returns never change.</td><td>PU up to 15 min; arrive before appt</td><td>60 min, max 70</td><td>Yes, about 3 on board; no BB/ISO, no companions</td></tr>
     <tr><td><span class="pill p-fhc">806</span></td><td>Outside appt: 1 h before. Center opens 8:00; DC 8-9. Move only if needed, tell lead over 75 min</td><td>15 min on fixed times</td><td>60, max 70</td><td>Max 3 on board</td></tr>
     <tr><td><span class="pill p-nctd">0118</span></td><td><b>Never changed</b></td><td>30 min</td><td>No limit</td><td>Full capacity to the same place</td></tr>
-    <tr><td><span class="pill p-sdva">7114/7115/7115C</span></td><td>Set by our processor (LJ VA appt minus 2 h, minus 3 h over 80 mi)</td><td>Appointments on time</td><td>Longer OK</td><td>WC yes; gurneys never with WC on board</td></tr>
-    <tr><td><span class="pill p-lbva">7117/7118</span></td><td><b>Not changed</b> (except standing dialysis times)</td><td>PU can run late, appt must be on time</td><td>No limit</td><td>WC yes; gurneys never</td></tr>
+    <tr><td><span class="pill p-sdva">7114/7115/7115C</span></td><td>Set by our processor from the distance (see <a href="#va-pickup">VA pick-up times</a>)</td><td>Appointments on time</td><td>Longer OK</td><td>WC yes; gurneys never with WC on board</td></tr>
+    <tr><td><span class="pill p-lbva">7117/7118</span></td><td><b>Not changed</b> (except standing dialysis times). Set by our processor from the distance (see <a href="#va-pickup">VA pick-up times</a>)</td><td>PU can run late, appt must be on time</td><td>No limit</td><td>WC yes; gurneys never</td></tr>
   </table></div>
   <div class="box warn"><b class="t">Never mix programs on board</b>St. Paul's with FHC, or NCTD with FHC: back-to-back is fine, never in the van at the same time.</div>
 </section>
@@ -1260,6 +1297,8 @@ Incident / Accident Notes         &lt;incidents; attach the report&gt;</pre>
   <details><summary>14. You are in a pre-assign with drivers added but no trips yet, and you're done for now. Green check or back arrow?</summary>Back arrow. The green check on an empty pre-assign deletes it.</details>
   <details><summary>15. Who needs to be on a bariatric gurney trip?</summary>Three people: a 3-person crew, or a 2-person crew plus a helper (a wheelchair driver or another crew on a payer-100 "Send 2 man" copy).</details>
   <details><summary>16. A South Yard driver's van goes to the shop. The only free van is at Vista. Use it?</summary>No. Drivers keep their own yard, so find a free South Yard van and ask your lead if there isn't one.</details>
+  <details><summary>17. An LBVA veteran has a 10:00 appointment at the Long Beach VA, and VetRide shows 85 miles. No time in the notes. What pick-up should the trip have?</summary>7:30. 85 miles is in the LBVA 80&ndash;100 row: 2.5 h before the appointment. (For SDVA the same distance would be 3 h.) The processor sets it; you only check it.</details>
+  <details><summary>18. An SDVA return trip is picked up at the La Jolla VA. What happens to it in the upload?</summary>It becomes a will call: the veteran calls when ready. Discharges and airport trips are the exception: they are never will calls.</details>
 </section>
 
 <!-- ================= HELP ================= -->
