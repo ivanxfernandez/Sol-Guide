@@ -104,10 +104,12 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:3px;width:28
   <a href="#call-return">Activating a return (will call)</a>
   <a href="#call-addon">Same-day add-ons</a>
   <a href="#call-complaint">Driving reports and complaints</a>
+  <a href="#call-concern">Caller concerns (SOP)</a>
   <a href="#noshow">No Show policy</a>
   <h4>Dispatch playbook</h4>
   <a href="#dp-shift">Your shift, start to finish</a>
   <a href="#dp-problems">When things go wrong</a>
+  <a href="#pace-fhc">St. Paul's and FHC standards</a>
   <a href="#dp-lunch">Lunches during the day</a>
   <a href="#dp-starts">Slots, start times and yards</a>
   <a href="#dp-crews">Crews, trainees, night crew</a>
@@ -723,7 +725,7 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:3px;width:28
   <h3>Program rules in one table</h3>
   <div class="tbl"><table>
     <tr><th>Program</th><th>Pick-up times</th><th>Late OK</th><th>Ride time</th><th>Sharing</th></tr>
-    <tr><td><span class="pill p-pace">250S</span></td><td>Blue-dot A legs: appt at or before 6:30 &rarr; minus 30 min; after 6:30 &rarr; minus 60 min. Returns never change.</td><td>PU up to 15 min; arrive before appt</td><td>60 min, max 70</td><td>Yes, about 3 on board; no BB/ISO, no companions</td></tr>
+    <tr><td><span class="pill p-pace">250S</span></td><td>Blue-dot A legs: appt at or before 6:30 &rarr; minus 30 min; after 6:30 &rarr; minus 60 min. Returns never change.</td><td>PU up to 15 min; arrive before appt</td><td>60 min maximum</td><td>Yes, about 3 on board; no BB/ISO, no companions</td></tr>
     <tr><td><span class="pill p-fhc">806</span></td><td>Outside appt: 1 h before. Center opens 8:00; DC 8-9. Move only if needed, tell lead over 75 min</td><td>15 min on fixed times</td><td>60, max 70</td><td>Max 3 on board</td></tr>
     <tr><td><span class="pill p-nctd">0118</span></td><td><b>Never changed</b></td><td>30 min</td><td>No limit</td><td>Full capacity to the same place</td></tr>
     <tr><td><span class="pill p-sdva">7114/7115/7115C</span></td><td>Set by our processor from the distance (see <a href="#va-pickup">VA pick-up times</a>)</td><td>Appointments on time</td><td>Longer OK</td><td>WC yes; gurneys never with WC on board</td></tr>
@@ -867,6 +869,7 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:3px;width:28
 
 <section id="call-complaint">
   <h2>Phone calls: driving reports and complaints</h2>
+  <div class="box tip"><b class="t">Use the SOP</b>For every concern call, follow <a href="#call-concern">Caller concerns: intake and reporting</a>, which covers what to collect and the reporting email template.</div>
   <h3>Someone reports how a driver was driving</h3>
   <p>Not common. The caller may be a client or anyone on the road.</p>
   <ol class="steps">
@@ -887,6 +890,35 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:3px;width:28
   </ol>
 </section>
 
+<section id="call-concern">
+  <h2>Caller concerns: intake and reporting (SOP)</h2>
+  <p class="lead">Use this procedure when a passenger, family member, facility or member of the public reports a service concern, or reports how a driver or vehicle behaved. Get enough detail to identify the event and assign follow-up.</p>
+  <ol class="steps">
+    <li><b>Check for an active safety concern.</b> Ask whether it is still happening, where, and whether anyone is injured or needs immediate help. For an accident, a medical emergency or an active safety concern, follow the <b>Incident and Accident Escalation SOP</b> right away (ask your lead for it). Write the report after the required notifications are made.</li>
+    <li><b>Collect and confirm the details</b> (see the table below).</li>
+    <li><b>Document the report and hand off the follow-up.</b> Use the approved reporting channel. Keep what the caller saw or was told separate from what dispatch verified, and write down where each verification came from. Include only the information needed to identify and review the concern. If follow-up is still open at shift change, hand it to the incoming dispatcher.</li>
+  </ol>
+  <h3>What to collect</h3>
+  <div class="tbl"><table>
+    <tr><th>Type of call</th><th>Ask for</th></tr>
+    <tr><td><b>Every call</b></td><td>When the call came in; what happened; the incident date, time and exact location. The caller's name, relationship to the passenger (if any) and a callback number. If the caller won't give their name, take the report anyway.</td></tr>
+    <tr><td><b>Trip or service concern</b></td><td>Passenger name, account, trip leg, and the facility or address (with the entrance or building when it matters). Look up the RouteGenie trip ID if you can. For a delay, write the scheduled time and the reported or verified arrival time separately.</td></tr>
+    <tr><td><b>Public report about a driver or vehicle</b></td><td>What the caller saw, the vehicle number or plate, and any markings. For roadway reports: the street or freeway, nearest cross street or exit, and direction of travel. You don't need a passenger name or trip ID.</td></tr>
+  </table></div>
+  <div class="box tip"><b class="t">Before you end the call</b>Read back the date, time, location and concern. Mark estimates <b>"Approximate"</b> and missing details <b>"Not confirmed"</b>. Ask what help they need right now, and tell them the next step you can actually confirm.</div>
+  <h3>Reporting email template</h3>
+<pre style="white-space:pre-wrap;background:#eef2f5;border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:.9rem">Subject: [Account or Public Report] | [Concern type] | [Incident date] | [Trip or vehicle ID if known]
+
+Call received:            [Date and time]
+Incident:                 [Date, time, exact location]
+Caller and callback:      [If provided]
+Trip or vehicle:          [Identifiers or description]
+Caller reported:          [What happened]
+Dispatch verified:        [Facts and source, or "Not confirmed"]
+Action and notifications: [What was done, who was notified, and when]
+Follow-up:                [Owner and next step, or "Owner pending"]</pre>
+</section>
+
 <section id="noshow">
   <h2>No Show policy</h2>
   <p class="lead">A trip is a <b>No Show</b> when:</p>
@@ -895,6 +927,7 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:3px;width:28
     <li>The driver arrives and the rider <b>cancels at the door</b>.</li>
     <li>The driver arrives and knocks, we call the rider with no answer, the driver <b>waits 15 minutes</b> (our wait-time policy), and the rider doesn't come out or isn't ready.</li>
   </ul>
+  <div class="box stop"><b class="t">Before a no-show is processed</b>Confirm the driver really arrived and waited the full 15 minutes. <b>St. Paul's PACE must approve every no-show</b>: write the approver's name in RouteGenie. FHC: document it the way the account requires. See <a href="#pace-fhc">St. Paul's and FHC standards</a>.</div>
   <div class="box warn"><b class="t">Always</b>Leave a note in RouteGenie saying why the trip was marked No Show, and tell the dispatcher for that account.</div>
 </section>
 
@@ -919,6 +952,7 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:3px;width:28
     <li><b>Outside appointments come first.</b> For St. Paul's that means trip purpose <code>Outside Appointment</code>. Dialysis, Glenner, outings and therapy are separate purposes. FHC has no purpose field: any drop-off that isn't the center (3420 College Ave) is outside.</li>
     <li><b>Who covers an open trip:</b> an idle driver from the same program first. For St. Paul's, use St. Paul's drivers before FHC drivers, and use FHC drivers only if FHC stays covered. Different programs can be back-to-back on one van, but never on board together (see <a href="#rg-assign">Program rules</a>).</li>
     <li><b>After assigning:</b> right-click &rarr; Change Status &rarr; <b>Assigned</b> so you don't wait for the driver to accept. The new trip lands at the <b>end</b> of the route, so fix the stop order. Wait a few seconds before assigning a second trip to the same van, then check that both stuck.</li>
+    <li><b>Tell the driver.</b> Whenever you add, remove or move one of a driver's trips, call them by radio or phone and say exactly what to do next. A change in RouteGenie alone is not enough.</li>
     <li><b>Never re-save the stop order of a van that is already en route or loaded</b> (IR / LO). Saving resets the trip in progress, and the driver has to tap "en route" again. Only move stops that come after the current one.</li>
     <li><b>Plan lunches</b> before each driver's 5th hour (see <a href="#dp-lunch">Lunches during the day</a>).</li>
     <li><b>Returns from outside appointments</b> can wait when the program says so. Go by what the program says, not by the clock.</li>
@@ -940,7 +974,7 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:3px;width:28
     <tr><td><b>Driver running late</b></td><td>Try to give the trip to a driver who can make it on time, outside appointments first. If nobody can, leave it and tell the program: St. Paul's by Teams ("Sol Dispatch Center / St Paul's Seniors") or phone, FHC by phone. Ask your lead before you message a program. Log late drivers in the Employee Resources Hub.</td></tr>
     <tr><td><b>Driver calls out or doesn't show</b></td><td>Tell your lead and Schedulers. If a spare driver is available, give them the whole route as it is, so no one else's start time changes. Otherwise split the trips. Use wheelchair drivers first. An SDVA gurney crew with no gurney trips to cover can also help with wheelchair trips.</td></tr>
     <tr><td><b>Incident / 911</b> (a fall, a participant on the floor, an accident)</td><td>Stop giving that driver trips until their incident report is done. Don't touch the trip already on board. Tell your lead right away. Incidents are often reported in the St Paul's / FHC chat ("240 is calling 911"). The report goes with your EOSR.</td></tr>
-    <tr><td><b>Outbound (A) leg was a No Show</b></td><td>Don't activate or assign the return. It gets cancelled. Add a Dispatching Note first ("A leg no show - return cancelled"), and let your lead do the cancel unless they've told you to.</td></tr>
+    <tr><td><b>Outbound (A) leg was a No Show or cancelled</b></td><td>Don't cancel the return just because the outbound was missed. Check with the program or the caller whether the return is still needed. If it isn't, record who cancelled it and when, and add a Dispatching Note.</td></tr>
     <tr><td><b>Bedbug (BB) or isolation (ISO) participant</b></td><td>Always rides alone. A BB participant only rides in a van that carries bedbug spray. Before assigning any St. Paul's trip, read the notes for "bed bug" / "isolation". The note says <code>NO RIDE SHARE - CLEAN VAN AFTER DROP-OFF</code>.</td></tr>
     <tr><td><b>Participant traveling with a spouse or companion</b></td><td>No shared ride. The companion takes a seat, so count them.</td></tr>
     <tr><td><b>Methadone trip</b></td><td>The same driver does the return. The participant is only at the clinic a short time.</td></tr>
@@ -950,6 +984,67 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:3px;width:28
     <tr><td><b>"Unable to assign ... deactivated passenger"</b></td><td>Leave it unassigned and tell your lead. Don't reactivate riders.</td></tr>
     <tr><td><b>A van breaks down or goes to the shop</b></td><td>Tell your lead and the road supervisor. The replacement van has to come from the <b>driver's own yard</b>. Samsara shows where the vans really are.</td></tr>
   </table></div>
+</section>
+
+<section id="pace-fhc">
+  <h2>St. Paul's PACE and FHC: service standards</h2>
+  <p class="lead">From the dispatcher training meeting of November 8, 2026. The goal: the same account-specific service on every shift, drivers told what to do before they have to ask, accurate RouteGenie records, and problems escalated in time.</p>
+
+  <h3>Know the difference between the two accounts</h3>
+  <div class="tbl"><table>
+    <tr><th>Requirement</th><th><span class="pill p-pace">250S</span> St. Paul's PACE</th><th><span class="pill p-fhc">806</span> FHC</th></tr>
+    <tr><td>Service level</td><td>Door-through-door</td><td>Door-through-door</td></tr>
+    <tr><td>No-show wait</td><td>15 minutes, and you need PACE's approval</td><td>15 minutes; document it the way the account requires</td></tr>
+    <tr><td>Ride time</td><td><b>60 minutes maximum</b></td><td>Watch the timing against the appointment</td></tr>
+    <tr><td>Morning pick-ups</td><td>The center opens at 8:00 AM; participants can arrive up to 15 minutes early</td><td>Generally pick up 1 hour before the appointment</td></tr>
+    <tr><td>Return trips</td><td>Confirm it's the right participant and that there is a safe handoff</td><td><b>45-minute</b> will-call response window</td></tr>
+    <tr><td>Escalation</td><td>Outside PACE hours, weekends and holidays: call the PACE Transportation Manager, then the Transportation Director</td><td>Tell FHC about delays; escalate coverage problems you can't solve</td></tr>
+  </table></div>
+  <div class="box warn"><b class="t">St. Paul's PACE hours</b>The PACE transportation department works <b>Monday&ndash;Friday, 6:30 AM&ndash;6:30 PM</b>. For urgent issues outside those hours, on weekends or holidays, call the <b>Transportation Manager (Andre)</b> first. If he's not available, call the <b>Transportation Director (Agostino / Gus)</b>. Ask your lead for their current numbers.</div>
+
+  <h3>Routing and talking to drivers</h3>
+  <ul>
+    <li>Every trip before 8:00 AM must be pre-assigned the evening before. Try to pre-assign the 8:00 AM trips too (see <a href="#coverage">Coverage procedures</a>).</li>
+    <li>Give drivers enough time for the vehicle inspection and the drive to their first pick-up. No unrealistic start times.</li>
+    <li><b>When you remove, add or move a trip, tell the driver directly by radio or phone and say exactly what to do next.</b> Changing it in RouteGenie is not enough.</li>
+    <li>If a driver calls the wrong program's dispatcher, hand them over to the right one. Never leave a driver without instructions.</li>
+    <li>If coverage can't be secured, notify management right away and document it.</li>
+  </ul>
+
+  <h3>On-time performance, will calls and delays</h3>
+  <ul>
+    <li>Keep checking upcoming pick-ups and appointment times all shift. Step in before a delay turns into a missed appointment.</li>
+    <li><b>FHC:</b> tell the right FHC contact about delays that affect service, and watch the 45-minute will-call window.</li>
+    <li><b>St. Paul's:</b> watch ride time against the 60-minute maximum. Avoid overcrowded vans and long shared-ride detours.</li>
+    <li>Give realistic ETAs. In RouteGenie, record the reason for the delay, who you told, and the plan to recover.</li>
+  </ul>
+
+  <h3>No-shows, cancellations and safe handoffs</h3>
+  <ul>
+    <li>Before a no-show is processed, confirm the driver really arrived and waited the full 15 minutes. For St. Paul's, get PACE's approval and write down the approver's name.</li>
+    <li><b>Don't cancel a return just because the outbound trip was missed or cancelled.</b> Check whether the return is still needed.</li>
+    <li>Confirm the participant's identity before they board, and confirm the right pick-up and destination.</li>
+    <li>Door-through-door means a proper handoff. <b>Never leave a participant without a required escort or a person to receive them.</b> If nobody is there, escalate.</li>
+    <li>Record cancellations right away: who asked for it, when it came in, and what it does to the linked trips.</li>
+  </ul>
+
+  <h3>RouteGenie records and notifications</h3>
+  <ul>
+    <li>Keep trip statuses accurate: In Route, Arrived, Loaded, Completed, No Show. Look into any missing or odd timestamps.</li>
+    <li>Write operational notes: delay reasons, driver instructions, contact attempts, approvals, handoffs and assignment changes.</li>
+    <li><b>"I didn't get my reminder" complaints:</b> check the phone number, the passenger's <b>Automated Calling System</b> setting and the notification settings. Text opt-in is separate from voice calls.</li>
+    <li><b>Text reminders:</b> a passenger who never opted in texts <code>RIDE</code> to <b>(844) 492-1270</b>. A passenger who opted out before texts <code>START</code>.</li>
+    <li>To investigate notification problems, check the <b>Twilio Call Log</b> and <b>Twilio SMS Log</b> reports.</li>
+    <li>Before you clock out, finish the <a href="#dp-eosr">EOSR</a> and tell the next dispatcher about open trips, incidents, call-outs, coverage gaps and anything unresolved.</li>
+  </ul>
+
+  <h3>Practice scenarios</h3>
+  <p>Decide what you would do, then click to see the expected answer.</p>
+  <style>#pace-fhc details{border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;background:#fbfcfd}#pace-fhc summary{cursor:pointer;font-weight:600}</style>
+  <details><summary>A. Driver trip changes: a driver is on the way when dispatch removes a pick-up, then adds it back five minutes later. What do you tell the driver, and what do you document?</summary>Call the driver right away. Make clear exactly which trip is next and the ETA. Take care of any passenger affected, and document the reassignment.</details>
+  <details><summary>B. PACE handoff: a participant gets home, but no responsible person is there for the required handoff.</summary>Don't leave the participant alone. Contact PACE (or the right escalation contact), and document the names, times and outcome.</details>
+  <details><summary>C. FHC will call: a return is activated at 1:15 PM, and at 1:35 PM there is still no vehicle assigned.</summary>The 45-minute target is 2:00 PM. Secure coverage, give a realistic ETA, and escalate the risk before the deadline.</details>
+  <details><summary>D. No-show: the driver reports no passenger after eight minutes at the pick-up.</summary>Not yet. Check the location and the contact attempts, wait the full 15 minutes, get the account's approval (PACE's for St. Paul's), and document it.</details>
 </section>
 
 <section id="dp-lunch">
@@ -1128,6 +1223,9 @@ Incident / Accident Notes         &lt;incidents; attach the report&gt;</pre>
     <li>Sending a gurney with one person, or a bariatric gurney with two.</li>
     <li>Trusting RouteGenie's ETA blindly. On long chains it often runs slower than real life. Check the van on the map before you give a caller a time.</li>
     <li>Kicking someone out of a pre-assign without saying so. Click No unless your lead says the work is yours.</li>
+    <li>Changing a driver's trips in RouteGenie without calling the driver.</li>
+    <li>Processing a St. Paul's no-show without PACE's approval, or before the driver has waited the full 15 minutes.</li>
+    <li>Leaving a participant at home with no one there to receive them.</li>
     <li>@tagging people on sheet posts, or posting the same message twice.</li>
   </ul>
 </section>
@@ -1351,7 +1449,7 @@ Incident / Accident Notes         &lt;incidents; attach the report&gt;</pre>
   <details><summary>10. A Long Beach gurney veteran is going to a VA clinic appointment and will need the crew to wait. Who takes it?</summary>Usually MedCare: wait-and-return and non-dialysis gurney trips go to MedCare. Dialysis veterans stay with Sol. Both legs go to the same company.</details>
   <details><summary>11. An SDVA trip from El Centro looks too far to reach. Leave it open?</summary>No. San Diego has no outside company, so an open SDVA trip simply isn't covered. Far trips get covered first, and Imperial / El Centro / Calexico trips must always be covered.</details>
   <details><summary>12. It's Monday 7 AM. A Saturday chat post said "Driver X can't come in tomorrow." Is Driver X out today?</summary>Not because of that post. "Tomorrow" in a Saturday post means Sunday. Check the Paycom Time-Off Dashboard and the schedule PDFs for today.</details>
-  <details><summary>13. A rider's outbound trip was a No Show. The rider's family calls to activate the return. What happens?</summary>The return is not activated. It gets cancelled (your lead's call), with a Dispatching Note explaining why.</details>
+  <details><summary>13. A participant's outbound trip was a No Show. Do you cancel the return?</summary>Not automatically. Check whether the return is still needed. Only cancel it if it isn't, and record who asked for the cancellation and when.</details>
   <details><summary>14. You are in a pre-assign with drivers added but no trips yet, and you're done for now. Green check or back arrow?</summary>Back arrow. The green check on an empty pre-assign deletes it.</details>
   <details><summary>15. Who needs to be on a bariatric gurney trip?</summary>Three people: a 3-person crew, or a 2-person crew plus a helper (a wheelchair driver or another crew on a payer-100 "Send 2 man" copy).</details>
   <details><summary>16. A South Yard driver's van goes to the shop. The only free van is at Vista. Use it?</summary>No. Drivers keep their own yard, so find a free South Yard van and ask your lead if there isn't one.</details>
@@ -1360,6 +1458,9 @@ Incident / Accident Notes         &lt;incidents; attach the report&gt;</pre>
   <details><summary>19. A trip has a 7:45 AM pick-up tomorrow. By when must it be pre-assigned with confirmed coverage?</summary>By 7:30 PM tonight. Every trip at or before 8:00 AM, for every account, must be pre-assigned in RouteGenie with confirmed coverage by 7:30 PM the night before.</details>
   <details><summary>20. The routing dispatcher submitted the schedule at 5:15 PM and told the pre-assignment dispatcher that a 6:30 AM trip has no driver. Is that trip covered?</summary>No. Submitting a schedule or communicating a trip is not confirmed coverage. From the moment the schedule is submitted, the pre-assignment dispatcher owns it: assign and verify it in RouteGenie by 7:30 PM, or notify management immediately if it can't be covered.</details>
   <details><summary>21. A new 6:00 AM trip comes in at 9:00 PM, after the routing dispatcher has left. Can it wait for the morning shift?</summary>No. The dispatcher on duty reviews it right away. If it can't be covered, notify management immediately and document it in the EOSR. It can't be left for the morning without escalation.</details>
+  <details><summary>22. A St. Paul's driver has waited 15 minutes and the participant isn't there. What do you need before the trip is marked No Show?</summary>PACE's approval. Confirm the driver arrived and waited the full 15 minutes, get PACE's OK, and write the approver's name in RouteGenie.</details>
+  <details><summary>23. A passenger says they stopped getting text reminders after replying STOP last month. What should they text, and to what number?</summary><code>START</code> to (844) 492-1270. (Someone who never opted in texts <code>RIDE</code>.) Text opt-in is separate from voice reminder calls.</details>
+  <details><summary>24. Someone calls about a Sol van driving badly on the freeway. They don't know any passenger. What do you need from them?</summary>What they saw, the van number or plate and any markings, the freeway, the nearest exit, the direction of travel, and the date and time. No passenger name or trip ID is needed. Read it back before you hang up.</details>
 </section>
 
 <!-- ================= HELP ================= -->
